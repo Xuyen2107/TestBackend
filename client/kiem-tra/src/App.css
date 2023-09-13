@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap");
+
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   font-family: "Raleway";
+}
+
+body {
+   background-color: #dedede;
+}
+
+button {
+   cursor: pointer;
+}
+
+.button {
+   padding: 4px 8px;
+   border-radius: 20px;
+   border: none;
+   background-color: #fff;
+}
+
+.button:hover {
+   background-color: #c0c0c0;
+}
+
+.App {
+   height: 100vh;
+   margin: 0 auto;
+   font-family: sans-serif;
+   text-align: center;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+}
+
+.container {
+   width: 500px;
+   height: 500px;
+   border: 1px solid #ececec;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   background-color: white;
+   border-radius: 12px;
+   display: flex;
+   flex-direction: column;
+}
+
+.header {
+   border-radius: 12px 12px 0px 0px;
+   padding: 10px;
+   background-color: #e1e1e1;
+   font-size: 18px;
+   font-weight: bold;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.todo-list-container {
+   padding: 10px;
+   flex: 1;
+   height: 0px;
+   max-height: 80vh;
+   overflow: hidden;
+   overflow-y: auto;
+   width: 100%;
+}
+
+.todo-item-container {
+   border-bottom: 1px solid #ececec;
+   padding: 10px;
+   font-size: 24px;
+   font-weight: 100;
+   display: flex;
+   align-items: center;
+}
+
+.todo-item-container.done {
+   color: #9a9a9a;
+   text-decoration: line-through;
+}
+
+.item-title {
+   margin-left: 20px;
+}
+
+.item {
+   position: relative;
+}
+
+.item::after {
+   content: "";
+   position: absolute;
+   left: 0;
+   top: 50%;
+   transform: translateY(50%);
+   border-bottom: 2px solid gray;
+   width: 100%;
+}
+
+.item-done-button {
+   border-radius: 100%;
+   cursor: pointer;
+   width: 20px;
+   height: 20px;
+}
+
+.item-done-button:hover {
+   background-color: #cdcdcd;
+}
+
+.form {
+   padding: 10px;
+   display: flex;
+   flex-wrap: wrap;
+   gap: 10px;
+   align-items: center;
+   justify-content: center;
+}
+
+.form > input {
+   flex: 1 0 auto;
+   padding: 8px 16px;
+   outline-color: #9a9a9a;
+   border: 1px solid #dcdcdc;
+   border-radius: 12px;
+   font-size: 22px;
+   font-weight: 400;
+}
+
+.form > button {
+   flex: 1 0 auto;
+   padding: 8px 16px;
+   font-size: 22px;
+   font-weight: 100;
+   border: 1px solid #dcdcdc;
+   border-radius: 12px;
+   cursor: pointer;
+   font-weight: 400;
+}
+
+.form > button:hover {
+   background-color: #dcdcdc;
+}
+
+.languague-picker {
+   margin: auto 8px;
+   cursor: pointer;
+   opacity: 0.2;
+}
+
+.languague-picker:hover {
+   opacity: 1;
+}
+
+.languague-picker.selected {
+   opacity: 1;
+}
